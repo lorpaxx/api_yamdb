@@ -8,4 +8,3 @@ def validate_year(value):
         raise ValidationError(
             f'{value} ещё не наступил!'
         )
-    # return value

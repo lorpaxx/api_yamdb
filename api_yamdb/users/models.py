@@ -11,9 +11,9 @@ class Roles(str, enum.Enum):
 
 class User(AbstractUser):
     ROLES = (
-        ('user', 'User'),
-        ('moderator', 'Moderator'),
-        ('admin', 'Admin')
+        (Roles.USER.value, 'User'),
+        (Roles.MODERATOR.value, 'Moderator'),
+        (Roles.ADMIN.value, 'Admin')
     )
     role = models.CharField(
         'Роль',

@@ -1,3 +1,4 @@
+from datetime import date
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
@@ -102,6 +103,12 @@ class Title(models.Model):
         verbose_name = 'Произведение'
         verbose_name_plural = 'Произведения'
         ordering = ('name',)
+        constraints = (
+            models.CheckConstraint(
+                check=models.Q(year__gt=date.today().year),
+                name='year_gt_now',
+            ),
+        )
 
     def __str__(self):
         '''

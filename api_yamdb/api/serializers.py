@@ -12,14 +12,13 @@ class UserEmailSerializer(serializers.ModelSerializer):
         fields = ('username', 'email',)
 
 
-class ConfirmationCodeSerializer(serializers.ModelSerializer):
+class ConfirmationCodeSerializer(serializers.Serializer):
     confirmation_code = serializers.CharField()
+    username = serializers.CharField()
 
     class Meta:
         model = User
         fields = ('username', 'confirmation_code')
-
-    username = serializers.CharField()
 
 
 class UserSerializer(serializers.ModelSerializer):
