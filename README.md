@@ -58,4 +58,6 @@ python manage.py runserver
 - в проекте доступно OpenAPI specification в формате ReDoc.
 
 # Авторы
-Проект совместный
+Проект совместный, оригинальная ссылка:
+https://github.com/Gena40/yamdb-api
+
